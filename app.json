@@ -1,0 +1,25 @@
+{
+  "name": "record-kerrang",
+  "description": "Record Kerrang Radio and store in Google Drive",
+  "keywords": [
+    "laravel"
+  ],
+  "repository": "https://github.com/michaelvickersuk",
+  "env": {
+    "GOOGLE_DRIVE": {
+      "description": "Credentials to access google drive",
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 0,
+      "size": "free"
+    },
+  },
+  "buildpacks": [
+    {
+      "url": "heroku-community/apt"
+    }
+  ]
+}
