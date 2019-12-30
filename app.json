@@ -17,6 +17,9 @@
       "size": "free"
     },
   },
+  "addons": [
+    "advanced-scheduler"
+  ],
   "buildpacks": [
     {
       "url": "heroku-community/apt"
