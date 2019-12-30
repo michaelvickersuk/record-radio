@@ -1,5 +1,6 @@
 eyed3
 mp3val
 python3
+python3-eyed3
 python-setuptools
 python-pkg-resources
