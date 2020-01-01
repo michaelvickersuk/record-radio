@@ -10,8 +10,19 @@ name="$(date -d 'now' '+%Y-%m-%d %A')"
 
 curl $STREAM_URL --max-time 10 --output "$name.mp3"
 
-mp3val "$name.mp3" -f -nb
+mp3val "$name.mp3" \
+    -f \        # Try to fix errors
+    -nb         # Remove backup files created during file rebuilding
 
-eyeD3 --year=$year --title="$name" --album="$show" --artist="Kerrang! Radio" --genre=Rock --add-image=./icon.png:ICON "$name.mp3"
+# eyeD3 --year=$year \
+#     --title="$name" \
+#     --album="$show" \
+#     --artist="Kerrang! Radio" \
+#     --genre=Rock \
+#     --add-image=./icon.png:ICON "$name.mp3"
 
-# upload to Google drive
+curl --request POST https://content.dropboxapi.com/2/files/upload \
+    --header "Authorization: Bearer $DROPBOX_TOKEN" \
+    --header "Dropbox-API-Arg: {\"path\": \"$name.mp3\"}" \
+    --header "Content-Type: application/octet-stream" \
+    --data-binary @$name.mp3
