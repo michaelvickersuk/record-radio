@@ -23,4 +23,4 @@ eyeD3 --release-year=${year} \
 
 echo "OAUTH_ACCESS_TOKEN=${DROPBOX_TOKEN}" > .dropbox_uploader
 
-dropbox_uploader.sh -f .dropbox_uploader upload "${name}.mp3" "${name}.mp3"
+bash ./dropbox_uploader.sh -f .dropbox_uploader upload "${name}.mp3" "${name}.mp3"
