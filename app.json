@@ -1,27 +1,28 @@
 {
   "name": "record-kerrang",
-  "description": "Record Kerrang Radio and store in Google Drive",
+  "description": "Record Kerrang Radio and store in Dropbox",
   "keywords": [
     "laravel"
   ],
   "repository": "https://github.com/michaelvickersuk",
   "env": {
-    "GOOGLE_DRIVE": {
-      "description": "Credentials to access google drive",
+    "DROPBOX_TOKEN": {
+      "description": "Token to access Dropbox",
+      "required": true
+    },
+    "STREAM_URL": {
+      "description": "Address of the radio stream",
       "required": true
     }
   },
   "formation": {
-    "web": {
-      "quantity": 0,
-      "size": "free"
-    },
   },
   "addons": [
     "advanced-scheduler"
   ],
   "buildpacks": [
     {
+      "url": "heroku/python",
       "url": "heroku-community/apt"
     }
   ]
