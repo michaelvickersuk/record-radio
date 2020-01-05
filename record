@@ -14,12 +14,12 @@ mp3val "$name.mp3" \
     -f \        # Try to fix errors
     -nb         # Remove backup files created during file rebuilding
 
-# eyeD3 --year=$year \
-#     --title="$name" \
-#     --album="$show" \
-#     --artist="Kerrang! Radio" \
-#     --genre=Rock \
-#     --add-image=./icon.png:ICON "$name.mp3"
+eyeD3 --year=$year \
+    --title="$name" \
+    --album="$show" \
+    --artist="Kerrang! Radio" \
+    --genre=Rock \
+    --add-image=./icon.png:ICON "$name.mp3"
 
 echo "OAUTH_ACCESS_TOKEN=$DROPBOX_TOKEN" > .dropbox_uploader
 
