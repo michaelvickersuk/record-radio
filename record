@@ -12,6 +12,10 @@ mp3val "${name}.mp3" \
     -f \
     -nb         # Fix errors & remove backup files created during file rebuilding
 
+sox "${name}.mp3" "${name}.gain.mp3" gain -20
+rm "${name}.mp3"
+mv "${name}.gain.mp3" "${name}.mp3"
+
 eyeD3 --release-year=${year} \
     --recording-date=${name} \
     --title="$name" \
