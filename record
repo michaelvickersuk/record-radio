@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-#set -e
-
 cd ~
 
 show="Johnny Doom"
@@ -15,6 +13,7 @@ mp3val "${name}.mp3" \
     -nb         # Fix errors & remove backup files created during file rebuilding
 
 eyeD3 --release-year=${year} \
+    --recording-date=${name} \
     --title="$name" \
     --album="$show" \
     --artist="Kerrang! Radio" \
