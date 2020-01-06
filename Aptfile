@@ -1,7 +1,4 @@
 mp3val
-libsox-fmt-all
+libsox-fmt-mp3
 sox
-libaudio2
-libsndio6.1
-libasound2-plugins
-alsa-utils
+gstreamer0.10-plugins-ugly
