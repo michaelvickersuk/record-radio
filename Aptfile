@@ -1,3 +1,7 @@
 mp3val
-sox
 libsox-fmt-all
+sox
+libaudio2
+libsndio6.1
+libasound2-plugins
+alsa-utils
