@@ -12,7 +12,7 @@ mp3val "${name}.mp3" \
     -f \
     -nb         # Fix errors & remove backup files created during file rebuilding
 
-sox "${name}.mp3" "${name}.gain.mp3" gain -20
+ffmpeg -i "${name}.mp3" -filter:a "volume=-20dB" "${name}.gain.mp3"
 rm "${name}.mp3"
 mv "${name}.gain.mp3" "${name}.mp3"
 
