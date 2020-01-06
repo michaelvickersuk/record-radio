@@ -1,2 +1,1 @@
 eyeD3
-git+https://github.com/rabitt/pysox.git
