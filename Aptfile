@@ -1,5 +1,3 @@
 mp3val
-ffmpeg
-libsox-fmt-all
-libsox-fmt-mp3
 sox
+libsox-fmt-all
