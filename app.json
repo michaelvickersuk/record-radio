@@ -10,6 +10,18 @@
       "description": "Token to access Dropbox",
       "required": true
     },
+    "GENRE": {
+      "description": "Musical genre for MP3 tagging",
+      "required": true
+    },
+    "SHOW_TITLE": {
+      "description": "Radio show title for MP3 tagging",
+      "required": true
+    },
+    "STATION_NAME": {
+      "description": "Radio station name for MP3 tagging",
+      "required": true
+    },
     "STREAM_URL": {
       "description": "Address of the radio stream",
       "required": true

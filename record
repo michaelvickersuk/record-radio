@@ -2,7 +2,6 @@
 
 cd ~
 
-show="Johnny Doom"
 year="$(date -d 'now' '+%Y')"
 name="$(date -d 'now' '+%Y-%m-%d')"
 
@@ -19,9 +18,9 @@ mv "${name}.gain.mp3" "${name}.mp3"
 eyeD3 --release-year="${year}" \
     --recording-date="${name}" \
     --title="${name}" \
-    --album="${show}" \
-    --artist="Kerrang! Radio" \
-    --genre=Rock \
+    --album="${SHOW_TITLE}" \
+    --artist="${STATION_NAME}" \
+    --genre="${GENRE}" \
     --add-image=./icon.png:ICON "${name}.mp3"
 
 echo "OAUTH_ACCESS_TOKEN=${DROPBOX_TOKEN}" > .dropbox_uploader
