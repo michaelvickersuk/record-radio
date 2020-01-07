@@ -16,10 +16,10 @@ ffmpeg -i "${name}.mp3" -filter:a "volume=-20dB" "${name}.gain.mp3"
 rm "${name}.mp3"
 mv "${name}.gain.mp3" "${name}.mp3"
 
-eyeD3 --release-year=${year} \
-    --recording-date=${name} \
-    --title="$name" \
-    --album="$show" \
+eyeD3 --release-year="${year}" \
+    --recording-date="${name}" \
+    --title="${name}" \
+    --album="${show}" \
     --artist="Kerrang! Radio" \
     --genre=Rock \
     --add-image=./icon.png:ICON "${name}.mp3"
