@@ -4,7 +4,7 @@ cd ~
 
 show="Johnny Doom"
 year="$(date -d 'now' '+%Y')"
-name="$(date -d 'now' '+%Y-%m-%d %A')"
+name="$(date -d 'now' '+%Y-%m-%d')"
 
 curl ${STREAM_URL} --max-time 10 --output "${name}.mp3"
 
