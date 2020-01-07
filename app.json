@@ -10,6 +10,10 @@
       "description": "Token to access Dropbox",
       "required": true
     },
+    "DURATION": {
+        "description": "Time in seconds to record the radio",
+        "required": true
+    },
     "GENRE": {
       "description": "Musical genre for MP3 tagging",
       "required": true
