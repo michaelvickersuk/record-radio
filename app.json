@@ -1,10 +1,10 @@
 {
   "name": "record-kerrang",
-  "description": "Record Kerrang Radio and store in Dropbox",
+  "description": "Record a radio stream and store in Dropbox",
   "keywords": [
     "laravel"
   ],
-  "repository": "https://github.com/michaelvickersuk",
+  "repository": "https://github.com/michaelvickersuk/record-radio",
   "env": {
     "DROPBOX_TOKEN": {
       "description": "Token to access Dropbox",
