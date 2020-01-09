@@ -6,7 +6,7 @@ year="$(date -d 'now' '+%Y')"
 name="$(date -d 'now' '+%Y-%m-%d')"
 
 curl ${STREAM_URL} --max-time ${DURATION} --output "${name}.mp3"
-11760
+
 mp3val "${name}.mp3" \
     -f \
     -nb         # Fix errors & remove backup files created during file rebuilding
@@ -23,7 +23,7 @@ eyeD3 --release-year="${year}" \
     --album="${SHOW_TITLE}" \
     --artist="${STATION_NAME}" \
     --genre="${GENRE}" \
-    --add-image=mp3-icon:icon "${name}.mp3"
+    --add-image=./mp3-icon:ICON "${name}.mp3"
 
 echo "OAUTH_ACCESS_TOKEN=${DROPBOX_TOKEN}" > .dropbox_uploader
 
