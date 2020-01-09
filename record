@@ -15,13 +15,15 @@ ffmpeg -i "${name}.mp3" -filter:a "volume=-20dB" "${name}.gain.mp3"
 rm "${name}.mp3"
 mv "${name}.gain.mp3" "${name}.mp3"
 
+curl ${MP3_ICON} --output mp3-icon
+
 eyeD3 --release-year="${year}" \
     --recording-date="${name}" \
     --title="${name}" \
     --album="${SHOW_TITLE}" \
     --artist="${STATION_NAME}" \
     --genre="${GENRE}" \
-    --add-image=./icon.png:ICON "${name}.mp3"
+    --add-image=icon:mp3-icon "${name}.mp3"
 
 echo "OAUTH_ACCESS_TOKEN=${DROPBOX_TOKEN}" > .dropbox_uploader
 

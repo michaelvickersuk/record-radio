@@ -18,6 +18,10 @@
       "description": "Musical genre for MP3 tagging",
       "required": true
     },
+    "MP3_ICON": {
+      "description": "Image icon for MP3 tagging",
+      "required": true
+    },
     "SHOW_TITLE": {
       "description": "Radio show title for MP3 tagging",
       "required": true
