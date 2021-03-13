@@ -6,8 +6,16 @@
   ],
   "repository": "https://github.com/michaelvickersuk/record-radio",
   "env": {
-    "DROPBOX_TOKEN": {
-      "description": "Token to access Dropbox",
+    "DROPBOX_APP_KEY": {
+      "description": "App key for Dropbox",
+      "required": true
+    },
+    "DROPBOX_APP_SECRET": {
+      "description": "App secret for Dropbox",
+      "required": true
+    },
+    "DROPBOX_REFRESH_TOKEN": {
+      "description": "Refresh token for Dropbox",
       "required": true
     },
     "DURATION": {

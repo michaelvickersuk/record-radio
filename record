@@ -21,6 +21,9 @@ eyeD3 --release-year="${year}" \
     --genre="${GENRE}" \
     --add-image=./mp3-icon:ICON "${name}.mp3"
 
-echo "OAUTH_ACCESS_TOKEN=${DROPBOX_TOKEN}" > .dropbox_uploader
+echo "CONFIGFILE_VERSION=2.0
+OAUTH_APP_KEY=${DROPBOX_APP_KEY}
+OAUTH_APP_SECRET=${DROPBOX_APP_SECRET}
+OAUTH_REFRESH_TOKEN=${DROPBOX_REFRESH_TOKEN}" > .dropbox_uploader
 
 bash ./dropbox_uploader.sh -f .dropbox_uploader upload "${name}.mp3" "${name}.mp3"
